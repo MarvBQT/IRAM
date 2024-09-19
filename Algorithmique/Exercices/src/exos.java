@@ -2,15 +2,15 @@
 public class exos {
 	public static void main(String[] args) {
 		
-		ex1.main();
-		//ex2.main();
-		//ex3.main();
-		//ex4.main();
-		//ex5.main();
-		//ex6.main();
-		//ex7.main();
-		//ex8.main();
-		//ex9.main();
+		ex01.main();
+		//ex02.main();
+		//ex03.main();
+		//ex04.main();
+		//ex05.main();
+		//ex06.main();
+		//ex07.main();
+		//ex08.main();
+		//ex09.main();
 		//ex10.main();
 		//ex11.main();
 		//ex12.main();
