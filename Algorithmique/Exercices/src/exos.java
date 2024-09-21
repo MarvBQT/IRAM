@@ -5,8 +5,8 @@ public class exos {
 		//ex01.main();
 		//ex02.main();
 		//ex03.main();
-		ex04.main();
-		//ex05.main();
+		//ex04.main();
+		ex05.main();
 		//ex06.main();
 		//ex07.main();
 		//ex08.main();
