@@ -22,7 +22,9 @@ public class ex06 {
 		return DemanderDouble("Entrez le taux de la TVA", ValMin, ValMax, "Valeur incorrecte. La valeur saisie doit être comprise entre " + ValMin + " et " + ValMax + ".", "Valeur incorrecte. Veuillez entrer un nombre réel.");
 	}
 
-	public static double DemanderDouble(String Texte, double ValMin, double ValMax, String MsgErrFiltre, String MsgErrFormat) { // Gérer msg erreur
+	
+	
+	public static double DemanderDouble(String Texte, double ValMin, double ValMax, String MsgErrValeur, String MsgErrFormat) { // getDoubleInput
 		double Saisie = 0;
 		boolean SaisieValide = false;
 		Scanner sc = new Scanner(System.in);
@@ -33,7 +35,7 @@ public class ex06 {
 			try {
 				Saisie = sc.nextDouble();
 				if (Saisie < ValMin || Saisie > ValMax) {	
-					System.out.println(MsgErrFiltre);				
+					System.out.println(MsgErrValeur);				
 				}
 				else
 				{
