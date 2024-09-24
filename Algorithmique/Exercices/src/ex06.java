@@ -5,37 +5,37 @@ import java.util.Scanner;
 
 public class ex06 {
 	public static void main() {
-		double PrixNet = DemanderPrixNet(0, Double.MAX_VALUE);
+		double PrixNet = getUserNetPriceInput(0, Double.MAX_VALUE);
 		double TauxTVA = DemanderTauxTVA(0, 21);
-		ex05.AfficherTVA(PrixNet, TauxTVA, ex05.CoutTVA(PrixNet, TauxTVA));
+		ex05.AfficherTVA(PrixNet, TauxTVA, ex05.calculCoutTVA(PrixNet, TauxTVA));
 	}
 
-	public static double DemanderPrixNet(double ValMin, double ValMax) {
-		return DemanderDouble("Entrez le prix net", ValMin, ValMax, "Valeur incorrecte. La valeur saisie doit être comprise entre " + ValMin + " et " + ValMax + ".", "Valeur incorrecte. Veuillez entrer un nombre réel.");
+	public static double getUserNetPriceInput(double ValMin, double ValMax) {
+		return getUser_doubleInput("Entrez le prix net", ValMin, ValMax, "Valeur incorrecte. La valeur saisie doit être comprise entre " + ValMin + " et " + ValMax + ".", "Valeur incorrecte. Veuillez entrer un nombre réel.");
 	}
 
-	public static double DemanderPrixBrut(double ValMin, double ValMax) {
-		return DemanderDouble("Entrez le prix brut", ValMin, ValMax, "Valeur incorrecte. La valeur saisie doit être comprise entre " + ValMin + " et " + ValMax + ".", "Valeur incorrecte. Veuillez entrer un nombre réel.");
+	public static double getUserPriceInput(double ValMin, double ValMax) {
+		return getUser_doubleInput("Entrez le prix brut", ValMin, ValMax, "Valeur incorrecte. La valeur saisie doit être comprise entre " + ValMin + " et " + ValMax + ".", "Valeur incorrecte. Veuillez entrer un nombre réel.");
 	}
 
 	public static double DemanderTauxTVA(double ValMin, double ValMax) {
-		return DemanderDouble("Entrez le taux de la TVA", ValMin, ValMax, "Valeur incorrecte. La valeur saisie doit être comprise entre " + ValMin + " et " + ValMax + ".", "Valeur incorrecte. Veuillez entrer un nombre réel.");
+		return getUser_doubleInput("Entrez le taux de la TVA", ValMin, ValMax, "Valeur incorrecte. La valeur saisie doit être comprise entre " + ValMin + " et " + ValMax + ".", "Valeur incorrecte. Veuillez entrer un nombre réel.");
 	}
 
 	
 	
-	public static double DemanderDouble(String Texte, double ValMin, double ValMax, String MsgErrValeur, String MsgErrFormat) { // getDoubleInput
+	public static double getUser_doubleInput(String Text, double ValMin, double ValMax, String MsgErrValue, String MsgErrFormat) { // getDoubleInput
 		double Saisie = 0;
 		boolean SaisieValide = false;
 		Scanner sc = new Scanner(System.in);
 
 		do {
-			System.out.println(Texte);
+			System.out.println(Text);
 
 			try {
 				Saisie = sc.nextDouble();
 				if (Saisie < ValMin || Saisie > ValMax) {	
-					System.out.println(MsgErrValeur);				
+					System.out.println(MsgErrValue);				
 				}
 				else
 				{

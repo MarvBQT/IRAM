@@ -11,14 +11,14 @@ public class ex05 {
 		//PJ1Ex1-5-c
 		double PrixNet = 121;
 		double TauxTVA = 21;
-		AfficherTVA(PrixNet, TauxTVA, CoutTVA(PrixNet, TauxTVA));		
+		AfficherTVA(PrixNet, TauxTVA, calculCoutTVA(PrixNet, TauxTVA));		
 		
 		PrixNet = 85.5;
 		TauxTVA = 12.5;
-		AfficherTVA(PrixNet, TauxTVA, CoutTVA(PrixNet, TauxTVA));
+		AfficherTVA(PrixNet, TauxTVA, calculCoutTVA(PrixNet, TauxTVA));
 	}
 
-	public static double CoutTVA(double PrixNet, double TauxTVA)
+	public static double calculCoutTVA(double PrixNet, double TauxTVA)
 	{
 		return PrixNet - PrixBrut(PrixNet, TauxTVA);
 	}
