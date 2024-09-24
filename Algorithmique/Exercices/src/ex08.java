@@ -4,12 +4,19 @@
 import java.util.Scanner;
 
 public class ex08 {
+	static final int CONST_MAX_TABLE = 20;
+	
 	public static void main()
 	{
-
+		System.out.println("Vous avez entré le numéro de table " + getTableNumber());
 	}
 	
-	public static int getUser_intInput(String Text, int ValMin, int ValMax, String MsgErrValue, String MsgErrFormat) 
+	public static int getTableNumber()
+	{
+		return getUser_intInput("Entrez le N° de table", 1, CONST_MAX_TABLE, "Numéro de table incorrect");
+	}
+	
+	public static int getUser_intInput(String Text, int ValMin, int ValMax, String MsgErr) 
 	{
 		int Saisie = 0;
 		boolean SaisieValide = false;
@@ -21,7 +28,7 @@ public class ex08 {
 			try {
 				Saisie = sc.nextInt();
 				if (Saisie < ValMin || Saisie > ValMax) {	
-					System.out.println(MsgErrValue);				
+					System.out.println(MsgErr);				
 				}
 				else
 				{
@@ -29,7 +36,7 @@ public class ex08 {
 				}
 
 			} catch (Exception e) {
-				System.out.println(MsgErrFormat);
+				System.out.println(MsgErr);
 				sc.next(); // Consomme l'entrée incorrecte
 			}
 

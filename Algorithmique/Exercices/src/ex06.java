@@ -11,18 +11,18 @@ public class ex06 {
 	}
 
 	public static double getUserNetPriceInput(double ValMin, double ValMax) {
-		return getUser_doubleInput("Entrez le prix net", ValMin, ValMax, "Prix incorrecte. Le prix doit être compris entre " + ValMin + " et " + ValMax + ".", "Saisie incorrecte. Veuillez entrer un nombre réel.");
+		return getUser_doubleInput("Entrez le prix net", ValMin, ValMax, "Prix incorrecte. Le prix doit être un nombre réel compris entre " + ValMin + " et " + ValMax + ".");
 	}
 
 	public static double getUserGrossPriceInput(double ValMin, double ValMax) {
-		return getUser_doubleInput("Entrez le prix brut", ValMin, ValMax, "Valeur incorrecte. La valeur saisie doit être comprise entre " + ValMin + " et " + ValMax + ".", "Saisie incorrecte. Veuillez entrer un nombre réel.");
+		return getUser_doubleInput("Entrez le prix brut", ValMin, ValMax, "Valeur incorrecte. La valeur saisie doit être un nombre réel compris entre " + ValMin + " et " + ValMax + ".");
 	}
 
 	public static double getUserVATInput(double ValMin, double ValMax) {
-		return getUser_doubleInput("Entrez le taux de TVA", ValMin, ValMax, "Valeur incorrecte. La valeur saisie doit être comprise entre " + ValMin + " et " + ValMax + ".", "Saisie incorrecte. Veuillez entrer un nombre réel.");
+		return getUser_doubleInput("Entrez le taux de TVA", ValMin, ValMax, "Valeur incorrecte. La valeur saisie doit être un nombre réel compris entre " + ValMin + " et " + ValMax + ".");
 	}
 
-	public static double getUser_doubleInput(String Text, double ValMin, double ValMax, String MsgErrValue, String MsgErrFormat) { 
+	public static double getUser_doubleInput(String Text, double ValMin, double ValMax, String MsgErr) { 
 		double Saisie = 0;
 		boolean SaisieValide = false;
 		Scanner sc = new Scanner(System.in);
@@ -33,7 +33,7 @@ public class ex06 {
 			try {
 				Saisie = sc.nextDouble();
 				if (Saisie < ValMin || Saisie > ValMax) {	
-					System.out.println(MsgErrValue);				
+					System.out.println(MsgErr);				
 				}
 				else
 				{
@@ -41,7 +41,7 @@ public class ex06 {
 				}
 
 			} catch (Exception e) {
-				System.out.println(MsgErrFormat);
+				System.out.println(MsgErr);
 				sc.next(); // Consomme l'entrée incorrecte
 			}
 

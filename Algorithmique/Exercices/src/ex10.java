@@ -3,6 +3,33 @@
 public class ex10 {
 	public static void main()
 	{
-
+		double PrixBrut = ex06.getUserGrossPriceInput(0, Double.MAX_VALUE);
+		double TauxTVA = getVATChoice();
+		double PrixNet = ex04.calculPrixNet(PrixBrut, ex04.calculMontantTVA(PrixBrut, TauxTVA) , 0);
+		AfficherPrix(PrixBrut, PrixNet, TauxTVA);
+	}
+	
+	public static double getVATChoice() 
+	{
+		double[] TVA = {6.0, 12.0, 21.0}; 
+		int Choix = Menu("Taux de TVA :",  new String[] {TVA[0] + "%", TVA[1] + "%", TVA[2] + "%"});
+		return TVA[Choix];	
+		
+	}
+	
+	public static int Menu(String Texte, String[] Options)
+	{
+		System.out.println(Texte);
+		
+        for (int i = 0; i < Options.length; i++) {
+            System.out.println((i+1) + " - " + Options[i]);
+        }
+		
+		return ex08.getUser_intInput("Choix: ", 1, Options.length, "La saisie doit être un nombre entier compris entre 1 et " + Options.length + ".") - 1;
+	}
+	
+	public static void AfficherPrix(double PrixBrut, double PrixNet, double TauxTVA)
+	{
+		System.out.println("Pour un prix brut de " + PrixBrut + " €, le prix net est de " + PrixNet + " € (TVA " + TauxTVA + "%)");
 	}
 }

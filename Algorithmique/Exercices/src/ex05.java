@@ -23,7 +23,7 @@ public class ex05 {
 		return PrixNet - calculPrixBrut(PrixNet, TauxTVA);
 	}
 	
-	private static double calculPrixBrut(double PrixNet, double TauxTVA)
+	public static double calculPrixBrut(double PrixNet, double TauxTVA)
 	{
 		return PrixNet / (1 + TauxTVA / 100);
 	}
@@ -32,4 +32,5 @@ public class ex05 {
 	{
 		System.out.println("Pour un prix net (TVAC) de " + PrixNet + " € et une TVA de " + TauxTVA + " %, le coût de la TVA s’élève à " + CoutTva + " €");
 	}
+	
 }

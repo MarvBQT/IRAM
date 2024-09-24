@@ -9,11 +9,11 @@ public class exos {
 		//ex03.main();
 		//ex04.main();
 		//ex05.main();
-		ex06.main();
+		//ex06.main();
 		//ex07.main();
 		//ex08.main();
 		//ex09.main();
-		//ex10.main();
+		ex10.main();
 		//ex11.main();
 		//ex12.main();
 		//ex13.main();

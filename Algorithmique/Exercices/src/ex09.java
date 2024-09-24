@@ -6,6 +6,11 @@
 public class ex09 {
 	public static void main()
 	{
-
+		getAndCheckTableNumber();
+	}
+	public static int getAndCheckTableNumber()
+	{
+		String MsgErr =  "Saisie incorrecte, le numéro de table doit être compris entre 1 et " + ex08.CONST_MAX_TABLE + ".\nContactez l’administrateur du programme si vous souhaitez augmenter ce nombre.";
+		return ex08.getUser_intInput("Entrez le N° de table", 1, ex08.CONST_MAX_TABLE, MsgErr);
 	}
 }

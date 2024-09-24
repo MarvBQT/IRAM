@@ -6,8 +6,9 @@
 public class ex07 {
 	public static void main()
 	{
-
+		double PrixBrut = ex06.getUserGrossPriceInput(0, Double.MAX_VALUE);
+		double TauxTVA = ex06.getUserVATInput(0, 21);
+		double PrixNet = ex04.calculPrixNet(PrixBrut, ex04.calculMontantTVA(PrixBrut, TauxTVA), 0);
+		ex04.AfficherPrix(PrixBrut, PrixNet);
 	}
-	
-
 }
