@@ -19,7 +19,7 @@ public class ex06 {
 	}
 
 	public static double getUserVATInput(double ValMin, double ValMax) {
-		return getUser_doubleInput("Entrez le taux de la TVA", ValMin, ValMax, "Valeur incorrecte. La valeur saisie doit être comprise entre " + ValMin + " et " + ValMax + ".", "Saisie incorrecte. Veuillez entrer un nombre réel.");
+		return getUser_doubleInput("Entrez le taux de TVA", ValMin, ValMax, "Valeur incorrecte. La valeur saisie doit être comprise entre " + ValMin + " et " + ValMax + ".", "Saisie incorrecte. Veuillez entrer un nombre réel.");
 	}
 
 	public static double getUser_doubleInput(String Text, double ValMin, double ValMax, String MsgErrValue, String MsgErrFormat) { 

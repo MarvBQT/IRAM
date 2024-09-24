@@ -20,10 +20,10 @@ public class ex05 {
 
 	public static double calculCoutTVA(double PrixNet, double TauxTVA)
 	{
-		return PrixNet - PrixBrut(PrixNet, TauxTVA);
+		return PrixNet - calculPrixBrut(PrixNet, TauxTVA);
 	}
 	
-	private static double PrixBrut(double PrixNet, double TauxTVA)
+	private static double calculPrixBrut(double PrixNet, double TauxTVA)
 	{
 		return PrixNet / (1 + TauxTVA / 100);
 	}

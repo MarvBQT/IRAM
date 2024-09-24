@@ -31,7 +31,7 @@ public class ex04 {
 	
 	private static void AfficherPrixNet(double PrixBrut, double TVA, double Reductions)
 	{	
-		Afficher(PrixBrut, PrixNet(PrixBrut, MontantTVA(PrixBrut, TVA) , Reductions));
+		Afficher(PrixBrut, calculPrixNet(PrixBrut, calculMontantTVA(PrixBrut, TVA) , Reductions));
 	}
 	
 	private static void Afficher(double PrixBrut, double PrixNet)
@@ -39,12 +39,12 @@ public class ex04 {
 		System.out.println("Pour un prix brut (HTVA) de " + PrixBrut + " €, le prix net (TVAC) est de " + PrixNet + " €");
 	}
 	
-	private static double PrixNet(double PrixBrut, double Taxes, double Reductions)
+	private static double calculPrixNet(double PrixBrut, double Taxes, double Reductions)
 	{
 		return PrixBrut + Taxes - Reductions;
 	}
 	
-	private static double MontantTVA(double PrixBrut, double Taux)
+	private static double calculMontantTVA(double PrixBrut, double Taux)
 	{
 		return PrixBrut * (Taux / 100);
 	}
