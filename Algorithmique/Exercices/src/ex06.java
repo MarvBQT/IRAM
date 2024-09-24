@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class ex06 {
 	public static void main() {
 		double PrixNet = getUserNetPriceInput(0, Double.MAX_VALUE);
-		double TauxTVA = DemanderTauxTVA(0, 21);
+		double TauxTVA = getUserVATInput(0, 21);
 		ex05.AfficherTVA(PrixNet, TauxTVA, ex05.calculCoutTVA(PrixNet, TauxTVA));
 	}
 
@@ -14,11 +14,11 @@ public class ex06 {
 		return getUser_doubleInput("Entrez le prix net", ValMin, ValMax, "Prix incorrecte. Le prix doit être compris entre " + ValMin + " et " + ValMax + ".", "Saisie incorrecte. Veuillez entrer un nombre réel.");
 	}
 
-	public static double getUserPriceInput(double ValMin, double ValMax) {
+	public static double getUserGrossPriceInput(double ValMin, double ValMax) {
 		return getUser_doubleInput("Entrez le prix brut", ValMin, ValMax, "Valeur incorrecte. La valeur saisie doit être comprise entre " + ValMin + " et " + ValMax + ".", "Saisie incorrecte. Veuillez entrer un nombre réel.");
 	}
 
-	public static double DemanderTauxTVA(double ValMin, double ValMax) {
+	public static double getUserVATInput(double ValMin, double ValMax) {
 		return getUser_doubleInput("Entrez le taux de la TVA", ValMin, ValMax, "Valeur incorrecte. La valeur saisie doit être comprise entre " + ValMin + " et " + ValMax + ".", "Saisie incorrecte. Veuillez entrer un nombre réel.");
 	}
 
