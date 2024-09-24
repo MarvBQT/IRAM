@@ -2,11 +2,12 @@ import java.util.Scanner;
 
 public class TestTryCatch {
 	public static void main() {
+		int intSaisieNumConso = 0;
 		Scanner sc = new Scanner(System.in); 
 		for (;;) {
 			try {
 				System.out.println("Entrez le N° du consommable : ");
-				int intSaisieNumConso = sc.nextInt();
+				intSaisieNumConso = sc.nextInt();
 				System.out.println("Valeur saisie du N° de consommable : " + intSaisieNumConso);
 			} catch (Exception e) {
 				System.out.println("Exception récupérée : " + e);
