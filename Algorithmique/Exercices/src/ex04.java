@@ -23,25 +23,18 @@ PrixBrut = PrixHTVA
 public class ex04 {
 	public static void main()
 	{
-		// PJ1Ex1-4-a
-		PrintPrixNet(100, 21);
-		PrintPrixNet(125.5, 21);
-		
-		// PJ1Ex1-4-b
-		PrintPrixNet(100, 6);
-		PrintPrixNet(125.5, 21);
-		
         // PJ1Ex1-4-c
-		PrintPrixNet(100, 6);
-		PrintPrixNet(125.5, 21);
+		AfficherPrixNet(100, 6, 0);
+		AfficherPrixNet(125.5, 21, 0);
+		AfficherPrixNet(100, 21, 0);		
 	}
 	
-	private static void PrintPrixNet(double PrixBrut, double TVA)
+	private static void AfficherPrixNet(double PrixBrut, double TVA, double Reductions)
 	{	
-		Print(PrixBrut, PrixNet(PrixBrut, MontantTVA(PrixBrut, TVA) , 0));
+		Afficher(PrixBrut, PrixNet(PrixBrut, MontantTVA(PrixBrut, TVA) , Reductions));
 	}
 	
-	private static void Print(double PrixBrut, double PrixNet)
+	private static void Afficher(double PrixBrut, double PrixNet)
 	{
 		System.out.println("Pour un prix brut (HTVA) de " + PrixBrut + " €, le prix net (TVAC) est de " + PrixNet + " €");
 	}

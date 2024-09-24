@@ -8,12 +8,17 @@
 public class ex05 {
 	public static void main()
 	{
-		//PJ1Ex1-5-a : 
+		//PJ1Ex1-5-c
 		double PrixNet = 121;
-		PrintCoutTVA(PrixNet, MontantTVA(PrixNet, 21));
+		double TauxTVA = 21;
+		AfficherTVA(PrixNet, TauxTVA, CoutTVA(PrixNet, TauxTVA));		
+		
+		PrixNet = 85.5;
+		TauxTVA = 12.5;
+		AfficherTVA(PrixNet, TauxTVA, CoutTVA(PrixNet, TauxTVA));
 	}
 
-	private static double MontantTVA(double PrixNet, double TauxTVA)
+	private static double CoutTVA(double PrixNet, double TauxTVA)
 	{
 		return PrixNet - PrixBrut(PrixNet, TauxTVA);
 	}
@@ -23,16 +28,8 @@ public class ex05 {
 		return PrixNet / (1 + TauxTVA / 100);
 	}
 	
-	private static void PrintCoutTVA(double PrixNet, double MontantTva)
-	{
-		System.out.println("Pour un net (TVAC) de " + PrixNet + " €, le coût de la TVA s’élève à " + MontantTva + " €");
-	}
-	
-	private static void Print(double PrixNet, double TauxTVA, double CoutTva)
+	private static void AfficherTVA(double PrixNet, double TauxTVA, double CoutTva)
 	{
 		System.out.println("Pour un prix net (TVAC) de " + PrixNet + " € et une TVA de " + TauxTVA + " %, le coût de la TVA s’élève à " + CoutTva + " €");
 	}
 }
-// b: Prendre 121€ et 21,0 %, 85,5€ et 12.5% pour les essais.
-
-// c: Prendre 121€ et 21,0 %, 85,5€ et 12.5% pour les essais. Le programme affiche : « Pour un prix net de x € et une TVA de y %, le coût de la TVA s’élève à z € ».
