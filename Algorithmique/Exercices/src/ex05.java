@@ -18,7 +18,7 @@ public class ex05 {
 		AfficherTVA(PrixNet, TauxTVA, CoutTVA(PrixNet, TauxTVA));
 	}
 
-	private static double CoutTVA(double PrixNet, double TauxTVA)
+	public static double CoutTVA(double PrixNet, double TauxTVA)
 	{
 		return PrixNet - PrixBrut(PrixNet, TauxTVA);
 	}
@@ -28,7 +28,7 @@ public class ex05 {
 		return PrixNet / (1 + TauxTVA / 100);
 	}
 	
-	private static void AfficherTVA(double PrixNet, double TauxTVA, double CoutTva)
+	public static void AfficherTVA(double PrixNet, double TauxTVA, double CoutTva)
 	{
 		System.out.println("Pour un prix net (TVAC) de " + PrixNet + " € et une TVA de " + TauxTVA + " %, le coût de la TVA s’élève à " + CoutTva + " €");
 	}

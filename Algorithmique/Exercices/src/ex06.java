@@ -5,19 +5,21 @@ import java.util.Scanner;
 
 public class ex06 {
 	public static void main() {
-
+		double PrixNet = DemanderPrixNet();
+		double TauxTVA = DemanderTauxTVA();
+		ex05.AfficherTVA(PrixNet, TauxTVA, ex05.CoutTVA(PrixNet, TauxTVA));
 	}
 
 	public static double DemanderPrixNet() {
-		return 0; // Entrez le prix net
+		return DemanderDouble("Entrez le prix net", 0, Double.MAX_VALUE);
 	}
 
 	public static double DemanderPrixBrut() {
-		return 0;
+		return DemanderDouble("Entrez le prix brut", 0, Double.MAX_VALUE);
 	}
 
 	public static double DemanderTauxTVA() {
-		return 0;
+		return DemanderDouble("Entrez le taux de TVA à appliquer", 0, 21);
 	}
 
 	public static double DemanderDouble(String Texte, double ValMin, double ValMax) {
