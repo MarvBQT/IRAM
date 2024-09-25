@@ -13,8 +13,8 @@ public class exos {
 		//ex07.main();
 		//ex08.main();
 		//ex09.main();
-		ex10.main();
-		//ex11.main();
+		//ex10.main();
+		ex11.main();
 		//ex12.main();
 		//ex13.main();
 		//ex14.main();
